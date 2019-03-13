@@ -9,7 +9,6 @@ setup(
     version='0.0.1',
     packages=['rv-schubert-sdk'],
     install_requires=[
-        'masonite',
     ],
     include_package_data=True,
 )
