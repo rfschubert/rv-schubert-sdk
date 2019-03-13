@@ -1,3 +1,49 @@
+class Transacao3Mock:
+
+    def get_PAYMENTZ_as_dict(self):
+        return {
+            'cellcard': {
+                'versao': '3.94',
+                'codigoTransacao': '3',
+                'reenvio': '0',
+                'codigo': '2988',
+                'cod_online': '1686085508',
+                'produto': '771',
+                'preco': '4.83',
+                'face': '5.00',
+                'vencimento': '2019-04-08',
+                'pago': '0',
+                'pin': '35490TESTE897578',
+                'lote': '109',
+                'serie': '121602',
+                'mensagem': 'Credito para jogos e aplicativos compativeis com PAYMENTEZ  na internet. Clique emADQUIRIR MOEDAS    ou  similar esiga instrucoes na tela.        Mais info em www.paymentez.com',
+                'dataRV': '2019-03-13 18:13:51'
+            }
+        }
+
+    def get_PAYMENTZ(self):
+        return """
+            <?xml version='1.0' encoding='iso-8859-1' ?>
+            <cellcard>
+                <versao>3.94</versao>
+                <codigoTransacao>3</codigoTransacao>
+                <reenvio>0</reenvio>
+                <codigo>2988</codigo>
+                <cod_online>1686085508</cod_online>
+                <produto>771</produto>
+                <preco>4.83</preco>
+                <face>5.00</face>
+                <vencimento>2019-04-08</vencimento>
+                <pago>0</pago>
+                <pin>35490TESTE897578</pin>
+                <lote>109</lote>
+                <serie>121602</serie>
+                <mensagem>Credito para jogos e aplicativos compativeis com PAYMENTEZ  na internet. Clique emADQUIRIR MOEDAS    ou  similar esiga instrucoes na tela.        Mais info em www.paymentez.com</mensagem>
+                <dataRV>2019-03-13 18:13:51</dataRV>
+            </cellcard>
+        """
+
+
 class Transacao1Mock:
 
     def get(self):

@@ -1,5 +1,13 @@
-from .rv_schubert_sdk import RVapi, Transacao1, Transacao5
-from .test_mockups import Transacao1Mock
+from decimal import Decimal
+
+import pendulum
+
+from .rv_schubert_sdk import RVapi, \
+    Transacao1, \
+    Transacao3, \
+    Transacao5, \
+    Recarga
+from .test_mockups import Transacao1Mock, Transacao3Mock
 
 from unittest import TestCase
 
@@ -89,6 +97,31 @@ class Transacao1TestCase(TestCase):
         self.assertIsInstance(self.transacao_1.execute(mock=Transacao1Mock().get()), dict)
 
 
+class Transacao3TestCase(TestCase):
+
+    def setUp(self):
+        self.transacao_3 = Transacao3()
+
+    def test_transacao_3_inherit_from_RVapi(self):
+        self.assertIsInstance(self.transacao_3, RVapi)
+
+    def test_execute_return_recarga_obj(self):
+        self.assertIsInstance(
+            self.transacao_3.execute(
+                compra=1,
+                produto="755",
+                mock=Transacao3Mock().get_PAYMENTZ()
+            ), Recarga
+        )
+
+    def test_execute_PAYMENTEZ_success(self):
+        self.transacao_3.execute(
+            compra=1,
+            produto="775",
+            mock=Transacao3Mock().get_PAYMENTZ()
+        )
+
+
 class Transacao5TestCase(TestCase):
 
     def setUp(self):
@@ -97,5 +130,30 @@ class Transacao5TestCase(TestCase):
     def test_transacao_5_inherit_from_RVapi(self):
         self.assertIsInstance(self.transacao_5, RVapi)
 
-    # def test_transacao_5_execute(self):
-    #     pass
+
+class RecargaObjectTestCase(TestCase):
+
+    def test_parse_dict(self):
+        recarga = Recarga()
+        recarga.parse_dict(Transacao3Mock().get_PAYMENTZ_as_dict())
+        self.assertIsInstance(recarga, Recarga)
+        self.assertEqual(recarga.VERSAO, 3.94)
+        self.assertEqual(recarga.COD_TRANSACAO, 3)
+        self.assertEqual(recarga.REENVIO, 0)
+        self.assertEqual(recarga.CODIGO, 2988)
+        self.assertEqual(recarga.COD_ONLINE, '1686085508')
+        self.assertEqual(recarga.PRODUTO, '771')
+        self.assertEqual(recarga.PRECO, Decimal('4.83'))
+        self.assertEqual(recarga.FACE, Decimal('5.00'))
+        self.assertEqual(recarga.VENCIMENTO, pendulum.datetime(year=2019, month=4, day=8))
+        self.assertEqual(recarga.PAGO, 0)
+        self.assertEqual(recarga.PIN, '35490TESTE897578')
+        self.assertEqual(recarga.LOTE, '109')
+        self.assertEqual(recarga.SERIE, '121602')
+        self.assertEqual(recarga.MENSAGEM, 'Credito para jogos e aplicativos compativeis com PAYMENTEZ  na internet. Clique emADQUIRIR MOEDAS    ou  similar esiga instrucoes na tela.        Mais info em www.paymentez.com')
+        self.assertEqual(recarga.DATA_RV, pendulum.datetime(year=2019, month=3, day=13, hour=18, minute=13, second=51))
+        self.assertEqual(recarga.DDD, None)
+        self.assertEqual(recarga.FONE, None)
+        self.assertEqual(recarga.CODIGO_ASSINANTE, None)
+        self.assertEqual(recarga.NSU, None)
+        self.assertEqual(recarga.POSSUI_BOLETO, None)

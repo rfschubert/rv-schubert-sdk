@@ -11,7 +11,8 @@ setup(
     install_requires=[
         'xmltodict',
         'json',
-        'requests'
+        'requests',
+        'pendulum',
     ],
     include_package_data=True,
 )

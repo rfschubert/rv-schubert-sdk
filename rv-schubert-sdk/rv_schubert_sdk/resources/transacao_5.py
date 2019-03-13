@@ -39,7 +39,7 @@ class Transacao5(RVapi):
         :param mock:
         :return:
         """
-        if self.IN_PRODUCTION is not None:
+        if mock is not None:
             response = mock
         else:
             payload = {

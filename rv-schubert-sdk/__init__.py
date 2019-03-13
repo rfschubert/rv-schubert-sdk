@@ -1,1 +1,1 @@
-from .rv_schubert_sdk import RVapi, Transacao1, Transacao5
+from .rv_schubert_sdk import RVapi, Transacao1, Transacao3, Transacao5
