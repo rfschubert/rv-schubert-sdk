@@ -7,8 +7,11 @@ setup(
     description="SKD de integracao com RV Tecnologia",
     url="https://github.com/rfschubert/rv-schubert-sdk",
     version='0.0.1',
-    packages=['rv-schubert-sdk'],
+    packages=['rv_schubert_sdk'],
     install_requires=[
+        'xmltodict',
+        'json',
+        'requests'
     ],
     include_package_data=True,
 )
