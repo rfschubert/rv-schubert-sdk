@@ -1,4 +1,4 @@
-from .rv_schubert_sdk import RVapi, Transacao1
+from .rv_schubert_sdk import RVapi, Transacao1, Transacao5
 from .test_mockups import Transacao1Mock
 
 from unittest import TestCase
@@ -87,3 +87,15 @@ class Transacao1TestCase(TestCase):
 
     def test_trasacao_1_execute(self):
         self.assertIsInstance(self.transacao_1.execute(mock=Transacao1Mock().get()), dict)
+
+
+class Transacao5TestCase(TestCase):
+
+    def setUp(self):
+        self.transacao_5 = Transacao5()
+
+    def test_transacao_5_inherit_from_RVapi(self):
+        self.assertIsInstance(self.transacao_5, RVapi)
+
+    # def test_transacao_5_execute(self):
+    #     pass

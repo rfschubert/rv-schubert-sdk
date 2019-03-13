@@ -3,7 +3,7 @@ SDK de integração com a RV Tecnologia por meio de sua `API XML`
 
 ### Integrações pendentes
 #### Transações
-- [ ] 1  - Consulta de Produtos e Operadoras
+- [X] 1  - Consulta de Produtos e Operadoras
 - [ ] 3  - Venda de PINs
 - [ ] 5  - Venda de RECARGA ONLINE
 - [ ] 6  - Consulta de Status
