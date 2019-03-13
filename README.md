@@ -1,10 +1,27 @@
 # rv-schubert-sdk
 SDK de integração com a RV Tecnologia por meio de sua `API XML`
 
+### Dependências
+Atualmente o SDK é dependente dos seguintes pacotes:
+
+```
+- xmltodict
+- json
+- requests
+- pendulum
+```
+
+
+### Considerações
+O objeto `Recarga`, retorna as datas por padrão usando a lib `pendulum` pois é mais pratico para calculos de datas se 
+houver necessidade.
+
+O objeto `Recarga` nada mais é que um helper para acessar a resposta padrão da `API` da `RV`.
+
 ### Integrações pendentes
 #### Transações
 - [X] 1  - Consulta de Produtos e Operadoras
-- [ ] 3  - Venda de PINs
+- [X] 3  - Venda de PINs
 - [ ] 5  - Venda de RECARGA ONLINE
 - [ ] 6  - Consulta de Status
 - [ ] 7  - Confirmação / Desfazimento de Transações

@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25013fef-32aa-4994-b4c5-8025e2ccac57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/transacao_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv-schubert-sdk/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv-schubert-sdk/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/objetos/recarga.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/objetos/recarga.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/transacao_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/transacao_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv-schubert-sdk/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv-schubert-sdk/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv-schubert-sdk/test_mockups.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv-schubert-sdk/test_mockups.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv-schubert-sdk/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv-schubert-sdk/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,59 +11,50 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/tests.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="147" column="62" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
-                  <folding>
-                    <element signature="e#0#27#0" expanded="true" />
-                    <element signature="e#819#2091#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/objetos/recarga.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="108">
-                  <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#0#27#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/setup.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="322">
-                  <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Pipfile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="253">
-                  <caret line="11" column="8" selection-start-line="11" selection-end-line="11" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/objetos/recarga.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="14" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="414">
+                <caret line="18" column="93" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pipfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="8" selection-start-line="11" selection-end-line="11" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,7 +92,6 @@
         <option value="$PROJECT_DIR$/rv-schubert-sdk/test.py" />
         <option value="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/rv_api.py" />
         <option value="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/transacao_1.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/objetos/Recarga.py" />
         <option value="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/__init__.py" />
         <option value="$PROJECT_DIR$/rv-schubert-sdk/__init__.py" />
@@ -122,6 +102,7 @@
         <option value="$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/objetos/recarga.py" />
         <option value="$PROJECT_DIR$/rv-schubert-sdk/tests.py" />
         <option value="$PROJECT_DIR$/rv-schubert-sdk/setup.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -347,16 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/transacao_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -425,17 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="147" column="62" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-            <element signature="e#819#2091#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/rv_schubert_sdk/resources/objetos/recarga.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -458,8 +418,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state relative-caret-position="253">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rv-schubert-sdk/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#819#2091#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="414">
+            <caret line="18" column="93" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
