@@ -6,7 +6,7 @@ from .rv_schubert_sdk import RVapi, \
     Transacao1, \
     Transacao3, \
     Transacao5, \
-    Recarga
+    Recarga, ErroRV
 from .test_mockups import Transacao1Mock, Transacao3Mock, ErrosMock
 
 from .rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, EstoqueInsuficiente, \
@@ -173,49 +173,72 @@ class ErrosTestCase(TestCase):
         self.error_builder = ErrosMock()
 
     def test_errors(self):
-        with self.assertRaises(FoneIncompletoInvalido):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(FoneIncompletoInvalido, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(1, "Fone Incompleto / Invalido"))
-        with self.assertRaises(LimiteCreditoInsuficiente):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(LimiteCreditoInsuficiente, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(2, "Limite de Crédito Insuficiente"))
-        with self.assertRaises(EstoqueInsuficiente):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(EstoqueInsuficiente, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(3, "Estoque Insuficiente"))
-        with self.assertRaises(TelefoneNaoAutorizado):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(TelefoneNaoAutorizado, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(4, "Telefone não autorizado"))
-        with self.assertRaises(SenhaInvalida):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(SenhaInvalida, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(5, "Senha Inválida"))
-        with self.assertRaises(MaximoNumeroConexoesAtingida):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(MaximoNumeroConexoesAtingida, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(6, "Máximo número de conexões atingida"))
-        with self.assertRaises(SistemaEmManutencao):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(SistemaEmManutencao, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(7, "Sistema em Manutenção"))
-        with self.assertRaises(OperadoraProdutoNaoEncontrado):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(OperadoraProdutoNaoEncontrado, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(8, "Operadora / Produto não encontrado"))
-        with self.assertRaises(CodigoInvalido):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(CodigoInvalido, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(9, "Código inválido"))
-        with self.assertRaises(ValorInvalido):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(ValorInvalido, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(10, "Valor Inválido"))
-        with self.assertRaises(Timeout):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(Timeout, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(11, "Timeout"))
-        with self.assertRaises(CompraExpirada):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(CompraExpirada, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(13, "Compra Expirada"))
-        with self.assertRaises(CompraInexistente):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(CompraInexistente, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(14, "Compra inexistente"))
-        with self.assertRaises(UsuarioLojaNaoEncontrado):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(UsuarioLojaNaoEncontrado, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(15, "Usuario/Loja não encontrados"))
-        with self.assertRaises(ParametrosInsuficientes):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(ParametrosInsuficientes, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(16, "Parâmetros Insuficientes"))
-        with self.assertRaises(CompraJaConfirmada):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(CompraJaConfirmada, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(17, "Compra já confirmada"))
-        with self.assertRaises(BoletoNaoEncontrado):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(BoletoNaoEncontrado, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(18, "Boleto não Encontrado"))
-        with self.assertRaises(ParametrosNaoEnviadosViaPOST):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(ParametrosNaoEnviadosViaPOST, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(19, "Parametros não enviados via POST"))
-        with self.assertRaises(CodigoTransacaoNaoInformado):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(CodigoTransacaoNaoInformado, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(20, "Codigo de Transacao não informado"))
-        with self.assertRaises(VersaoNaoInformada):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(VersaoNaoInformada, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(21, "Versão não informada"))
-        with self.assertRaises(UsuarioSemNivelDeAcesso):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(UsuarioSemNivelDeAcesso, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(22, "Usuário sem nível de acesso"))
-        with self.assertRaises(CobrancaAindaNaoVisualizada):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(CobrancaAindaNaoVisualizada, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(23, "Cobrança ainda não visualizada"))
-        with self.assertRaises(TransacaoNaoPermitida):
+        with self.assertRaises(ErroRV):
+            self.assertTrue(issubclass(TransacaoNaoPermitida, ErroRV))
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(24, "Transação não permitida"))
