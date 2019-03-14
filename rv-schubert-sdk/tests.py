@@ -7,7 +7,14 @@ from .rv_schubert_sdk import RVapi, \
     Transacao3, \
     Transacao5, \
     Recarga
-from .test_mockups import Transacao1Mock, Transacao3Mock
+from .test_mockups import Transacao1Mock, Transacao3Mock, ErrosMock
+
+from .rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, EstoqueInsuficiente, \
+    TelefoneNaoAutorizado, SenhaInvalida, MaximoNumeroConexoesAtingida, SistemaEmManutencao, \
+    OperadoraProdutoNaoEncontrado, CodigoInvalido, ValorInvalido, Timeout, CompraExpirada, CompraInexistente, \
+    UsuarioLojaNaoEncontrado, ParametrosInsuficientes, CompraJaConfirmada, BoletoNaoEncontrado, \
+    ParametrosNaoEnviadosViaPOST, CodigoTransacaoNaoInformado, VersaoNaoInformada, UsuarioSemNivelDeAcesso, \
+    CobrancaAindaNaoVisualizada, TransacaoNaoPermitida
 
 from unittest import TestCase
 
@@ -150,10 +157,65 @@ class RecargaObjectTestCase(TestCase):
         self.assertEqual(recarga.PIN, '35490TESTE897578')
         self.assertEqual(recarga.LOTE, '109')
         self.assertEqual(recarga.SERIE, '121602')
-        self.assertEqual(recarga.MENSAGEM, 'Credito para jogos e aplicativos compativeis com PAYMENTEZ  na internet. Clique emADQUIRIR MOEDAS    ou  similar esiga instrucoes na tela.        Mais info em www.paymentez.com')
+        self.assertEqual(recarga.MENSAGEM,
+                         'Credito para jogos e aplicativos compativeis com PAYMENTEZ  na internet. Clique emADQUIRIR MOEDAS    ou  similar esiga instrucoes na tela.        Mais info em www.paymentez.com')
         self.assertEqual(recarga.DATA_RV, pendulum.datetime(year=2019, month=3, day=13, hour=18, minute=13, second=51))
         self.assertEqual(recarga.DDD, None)
         self.assertEqual(recarga.FONE, None)
         self.assertEqual(recarga.CODIGO_ASSINANTE, None)
         self.assertEqual(recarga.NSU, None)
         self.assertEqual(recarga.POSSUI_BOLETO, None)
+
+
+class ErrosTestCase(TestCase):
+
+    def setUp(self):
+        self.error_builder = ErrosMock()
+
+    def test_errors(self):
+        with self.assertRaises(FoneIncompletoInvalido):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(1, "Fone Incompleto / Invalido"))
+        with self.assertRaises(LimiteCreditoInsuficiente):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(2, "Limite de Crédito Insuficiente"))
+        with self.assertRaises(EstoqueInsuficiente):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(3, "Estoque Insuficiente"))
+        with self.assertRaises(TelefoneNaoAutorizado):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(4, "Telefone não autorizado"))
+        with self.assertRaises(SenhaInvalida):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(5, "Senha Inválida"))
+        with self.assertRaises(MaximoNumeroConexoesAtingida):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(6, "Máximo número de conexões atingida"))
+        with self.assertRaises(SistemaEmManutencao):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(7, "Sistema em Manutenção"))
+        with self.assertRaises(OperadoraProdutoNaoEncontrado):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(8, "Operadora / Produto não encontrado"))
+        with self.assertRaises(CodigoInvalido):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(9, "Código inválido"))
+        with self.assertRaises(ValorInvalido):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(10, "Valor Inválido"))
+        with self.assertRaises(Timeout):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(11, "Timeout"))
+        with self.assertRaises(CompraExpirada):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(13, "Compra Expirada"))
+        with self.assertRaises(CompraInexistente):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(14, "Compra inexistente"))
+        with self.assertRaises(UsuarioLojaNaoEncontrado):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(15, "Usuario/Loja não encontrados"))
+        with self.assertRaises(ParametrosInsuficientes):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(16, "Parâmetros Insuficientes"))
+        with self.assertRaises(CompraJaConfirmada):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(17, "Compra já confirmada"))
+        with self.assertRaises(BoletoNaoEncontrado):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(18, "Boleto não Encontrado"))
+        with self.assertRaises(ParametrosNaoEnviadosViaPOST):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(19, "Parametros não enviados via POST"))
+        with self.assertRaises(CodigoTransacaoNaoInformado):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(20, "Codigo de Transacao não informado"))
+        with self.assertRaises(VersaoNaoInformada):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(21, "Versão não informada"))
+        with self.assertRaises(UsuarioSemNivelDeAcesso):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(22, "Usuário sem nível de acesso"))
+        with self.assertRaises(CobrancaAindaNaoVisualizada):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(23, "Cobrança ainda não visualizada"))
+        with self.assertRaises(TransacaoNaoPermitida):
+            RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(24, "Transação não permitida"))

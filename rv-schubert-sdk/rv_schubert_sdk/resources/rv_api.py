@@ -1,3 +1,5 @@
+from .exceptions import *
+
 import json
 
 import requests
@@ -25,7 +27,14 @@ class RVapi:
             self.IN_PRODUCTION = False
 
     def convert_xml_to_dict(self, xml):
-        return json.loads(json.dumps(xmltodict.parse(xml.split("?>")[1], process_namespaces=True)))
+        converted = json.loads(json.dumps(xmltodict.parse(xml.split("?>")[1], process_namespaces=True)))
+
+        try:
+            self.check_for_error(converted)
+        except:
+            raise
+
+        return converted
 
     def set_credenciais(self, loja: str, nome: str, senha: str):
         self.CREDENCIAIS = {
@@ -43,3 +52,34 @@ class RVapi:
             data=postData
         )
         return response.text
+
+    def check_for_error(self, data):
+        errors = {
+            '1': FoneIncompletoInvalido,
+            '2': LimiteCreditoInsuficiente,
+            '3': EstoqueInsuficiente,
+            '4': TelefoneNaoAutorizado,
+            '5': SenhaInvalida,
+            '6': MaximoNumeroConexoesAtingida,
+            '7': SistemaEmManutencao,
+            '8': OperadoraProdutoNaoEncontrado,
+            '9': CodigoInvalido,
+            '10': ValorInvalido,
+            '11': Timeout,
+            '13': CompraExpirada,
+            '14': CompraInexistente,
+            '15': UsuarioLojaNaoEncontrado,
+            '16': ParametrosInsuficientes,
+            '17': CompraJaConfirmada,
+            '18': BoletoNaoEncontrado,
+            '19': ParametrosNaoEnviadosViaPOST,
+            '20': CodigoTransacaoNaoInformado,
+            '21': VersaoNaoInformada,
+            '22': UsuarioSemNivelDeAcesso,
+            '23': CobrancaAindaNaoVisualizada,
+            '24': TransacaoNaoPermitida,
+        }
+
+        data = data.get('cellcard')
+        if data.get('erro', None) is not None:
+            raise errors[data['erro']['codigo']]

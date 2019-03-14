@@ -1,3 +1,19 @@
+class ErrosMock:
+
+    def build_error_xml(self, codigo, mensagem):
+        return """
+        <?xml version='1.0' encoding='ISO-8859-1' ?>
+        <cellcard>
+            <versao>3.94</versao>
+            <codigoTransacao>0</codigoTransacao>
+            <erro>
+                <codigo>{codigo}</codigo>
+                <mensagem>{mensagem}</mensagem>
+            </erro>
+        </cellcard>
+        """.format(codigo=codigo, mensagem=mensagem)
+
+
 class Transacao3Mock:
 
     def get_PAYMENTZ_as_dict(self):
