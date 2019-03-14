@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open('README.md') as f:
     readme = f.read()
@@ -12,8 +12,8 @@ setup(
     author_email="rfswdp@gmail.com",
     description="SKD de integracao com RV Tecnologia",
     url="https://github.com/rfschubert/rv-schubert-sdk",
-    version='0.0.4',
-    packages=['rv_schubert_sdk'],
+    version='0.0.5',
+    packages=find_packages(exclude=('tests', 'docs')),
     long_description=readme,
     license=license,
     install_requires=[
