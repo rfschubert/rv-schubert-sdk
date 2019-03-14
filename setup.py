@@ -1,6 +1,6 @@
 from setuptools import setup
 
-with open('README.rst') as f:
+with open('README.md') as f:
     readme = f.read()
 
 with open('LICENSE') as f:
@@ -12,7 +12,7 @@ setup(
     author_email="rfswdp@gmail.com",
     description="SKD de integracao com RV Tecnologia",
     url="https://github.com/rfschubert/rv-schubert-sdk",
-    version='0.0.1',
+    version='0.0.2',
     packages=['rv_schubert_sdk'],
     long_description=readme,
     license=license,
