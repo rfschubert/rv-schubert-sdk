@@ -7,7 +7,7 @@ class Transacao1(RVapi):
         super(Transacao1, self).__init__(self, *args, **kwargs)
 
     def execute(self, mock=None):
-        if self.IN_PRODUCTION is not None:
+        if mock is not None:
             response = mock
         else:
             response = self.doPOST({
