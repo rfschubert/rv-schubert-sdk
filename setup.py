@@ -12,7 +12,7 @@ setup(
     author_email="rfswdp@gmail.com",
     description="SKD de integracao com RV Tecnologia",
     url="https://github.com/rfschubert/rv-schubert-sdk",
-    version='0.0.3',
+    version='0.0.4',
     packages=['rv_schubert_sdk'],
     long_description=readme,
     license=license,
