@@ -2,14 +2,14 @@ from decimal import Decimal
 
 import pendulum
 
-from .rv_schubert_sdk import RVapi, \
+from rv_schubert_sdk import RVapi, \
     Transacao1, \
     Transacao3, \
     Transacao5, \
     Recarga, ErroRV
 from .test_mockups import Transacao1Mock, Transacao3Mock, ErrosMock
 
-from .rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, EstoqueInsuficiente, \
+from rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, EstoqueInsuficiente, \
     TelefoneNaoAutorizado, SenhaInvalida, MaximoNumeroConexoesAtingida, SistemaEmManutencao, \
     OperadoraProdutoNaoEncontrado, CodigoInvalido, ValorInvalido, Timeout, CompraExpirada, CompraInexistente, \
     UsuarioLojaNaoEncontrado, ParametrosInsuficientes, CompraJaConfirmada, BoletoNaoEncontrado, \
