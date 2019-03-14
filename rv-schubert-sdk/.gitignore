@@ -1,6 +1,8 @@
 rv-schubert-sdk/dist
 rv-schubert-sdk/rv_schubert_sdk.egg-info
 
+../.idea/*
+
 
 # Created by https://www.gitignore.io/api/venv,python,virtualenv
 # Edit at https://www.gitignore.io/?templates=venv,python,virtualenv
