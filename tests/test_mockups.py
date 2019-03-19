@@ -14,6 +14,31 @@ class ErrosMock:
         """.format(codigo=codigo, mensagem=mensagem)
 
 
+class Transacao5Mock:
+
+    def get_recarga_oi_20(self):
+        return """
+        <?xml version="1.0" encoding="iso-8859-1" ?>
+        <cellcard>
+            <versao>3.94</versao>
+            <codigoTransacao>5</codigoTransacao>
+            <reenvio>0</reenvio>
+            <codigo>2990</codigo>
+            <cod_online>1686085733</cod_online>
+            <produto>1021</produto>
+            <preco>48.25</preco>
+            <face>50.00</face>
+            <vencimento>2019-04-08</vencimento>
+            <pago>0</pago>
+            <ddd>47</ddd>
+            <fone>99999999</fone>
+            <mensagem>FACA UMA RECARGADA OI DE R$20 E GANHE 1 GB POR 7 DIAS.INTERNET+VOZ+LIGACOES+TUDO+JUNTO+PARA VOCEUSAR, BASTA RECARREGAR. DIA.INTERNET+VOZ+LIGACOES+TUDO+JUNTO+PARA VOCE</mensagem>
+            <nsu>100607</nsu>
+            <dataRV>2019-03-19 14:05:23</dataRV>
+        </cellcard>
+        """
+
+
 class Transacao3Mock:
 
     def get_PAYMENTZ_as_dict(self):

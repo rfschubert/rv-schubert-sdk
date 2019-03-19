@@ -18,7 +18,7 @@ class Transacao5(RVapi):
             produto: str,
             ddd: str,
             fone: str,
-            codigo_assinante: str,
+            codigo_assinante: str = None,
             valor: Decimal = None,
             id_terminal: str = None,
             bit_boleto: int = None,
@@ -69,4 +69,4 @@ class Transacao5(RVapi):
 
             response = self.doPOST(payload)
 
-        return self.convert_xml_to_dict(response)
+        return Recarga().parse_dict(self.convert_xml_to_dict(response))

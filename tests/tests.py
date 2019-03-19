@@ -7,7 +7,7 @@ from rv_schubert_sdk import RVapi, \
     Transacao3, \
     Transacao5, \
     Recarga, ErroRV
-from .test_mockups import Transacao1Mock, Transacao3Mock, ErrosMock
+from .test_mockups import Transacao1Mock, Transacao3Mock, ErrosMock, Transacao5Mock
 
 from rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, EstoqueInsuficiente, \
     TelefoneNaoAutorizado, SenhaInvalida, MaximoNumeroConexoesAtingida, SistemaEmManutencao, \
@@ -137,6 +137,32 @@ class Transacao5TestCase(TestCase):
     def test_transacao_5_inherit_from_RVapi(self):
         self.assertIsInstance(self.transacao_5, RVapi)
 
+    def test_transacao_5_oi_phone_credit_success(self):
+        result = self.transacao_5.execute(
+            compra="2990",
+            produto="1021",
+            ddd="47",
+            fone="99999999",
+            mock=Transacao5Mock().get_recarga_oi_20()
+        )
+
+        self.assertIsInstance(result, Recarga)
+        self.assertEqual(result.VERSAO, 3.94)
+        self.assertEqual(result.COD_TRANSACAO, 5)
+        self.assertEqual(result.REENVIO, 0)
+        self.assertEqual(result.CODIGO, 2990)
+        self.assertEqual(result.COD_ONLINE, '1686085733')
+        self.assertEqual(result.PRODUTO, '1021')
+        self.assertEqual(result.PRECO, Decimal("48.25"))
+        self.assertEqual(result.FACE, Decimal("50.00"))
+        self.assertEqual(result.VENCIMENTO, pendulum.datetime(year=2019, month=4, day=8).date())
+        self.assertEqual(result.PAGO, 0)
+        self.assertEqual(result.DDD, '47')
+        self.assertEqual(result.FONE, '99999999')
+        self.assertEqual(result.MENSAGEM, 'FACA UMA RECARGADA OI DE R$20 E GANHE 1 GB POR 7 DIAS.INTERNET+VOZ+LIGACOES+TUDO+JUNTO+PARA VOCEUSAR, BASTA RECARREGAR. DIA.INTERNET+VOZ+LIGACOES+TUDO+JUNTO+PARA VOCE')
+        self.assertEqual(result.NSU, '100607')
+        self.assertEqual(result.DATA_RV, pendulum.datetime(year=2019, month=3, day=19, hour=14, minute=5, second=23))
+
 
 class RecargaObjectTestCase(TestCase):
 
@@ -152,7 +178,7 @@ class RecargaObjectTestCase(TestCase):
         self.assertEqual(recarga.PRODUTO, '771')
         self.assertEqual(recarga.PRECO, Decimal('4.83'))
         self.assertEqual(recarga.FACE, Decimal('5.00'))
-        self.assertEqual(recarga.VENCIMENTO, pendulum.datetime(year=2019, month=4, day=8))
+        self.assertEqual(recarga.VENCIMENTO, pendulum.datetime(year=2019, month=4, day=8).date())
         self.assertEqual(recarga.PAGO, 0)
         self.assertEqual(recarga.PIN, '35490TESTE897578')
         self.assertEqual(recarga.LOTE, '109')
