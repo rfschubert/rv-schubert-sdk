@@ -14,6 +14,22 @@ class ErrosMock:
         """.format(codigo=codigo, mensagem=mensagem)
 
 
+class Transacao9Mock:
+
+    def get(self):
+        return """
+        <?xml version="1.0" encoding="iso-8859-1" ?>
+        <cellcard>
+        <versao>3.94</versao>
+        <codigoTransacao>9</codigoTransacao>
+        <limite_credito>100000.00</limite_credito>
+        <limite_disponivel>71936.28</limite_disponivel>
+        <antecipado>0.18</antecipado>
+        <valor_aberto>196819.21</valor_aberto>
+        </cellcard>
+        """
+
+
 class Transacao5Mock:
 
     def get_recarga_oi_20(self):

@@ -6,8 +6,8 @@ from rv_schubert_sdk import RVapi, \
     Transacao1, \
     Transacao3, \
     Transacao5, \
-    Recarga, ErroRV, Produto, Operadora
-from .test_mockups import Transacao1Mock, Transacao3Mock, ErrosMock, Transacao5Mock
+    Recarga, ErroRV, Produto, Operadora, Transacao9
+from .test_mockups import Transacao1Mock, Transacao3Mock, ErrosMock, Transacao5Mock, Transacao9Mock
 
 from rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, EstoqueInsuficiente, \
     TelefoneNaoAutorizado, SenhaInvalida, MaximoNumeroConexoesAtingida, SistemaEmManutencao, \
@@ -164,6 +164,20 @@ class Transacao5TestCase(TestCase):
                          'FACA UMA RECARGADA OI DE R$20 E GANHE 1 GB POR 7 DIAS.INTERNET+VOZ+LIGACOES+TUDO+JUNTO+PARA VOCEUSAR, BASTA RECARREGAR. DIA.INTERNET+VOZ+LIGACOES+TUDO+JUNTO+PARA VOCE')
         self.assertEqual(result.NSU, '100607')
         self.assertEqual(result.DATA_RV, pendulum.datetime(year=2019, month=3, day=19, hour=14, minute=5, second=23))
+
+
+class Transacao9TestCase(TestCase):
+
+    def setUp(self):
+        self.transacao_9 = Transacao9()
+
+    def test_execute(self):
+        self.transacao_9.execute(Transacao9Mock().get())
+
+        self.assertEqual(self.transacao_9.LIMITE_CREDITO, Decimal("100000"))
+        self.assertEqual(self.transacao_9.LIMITE_DISPONIVEL, Decimal("71936.28"))
+        self.assertEqual(self.transacao_9.ANTECIPADO, Decimal("0.18"))
+        self.assertEqual(self.transacao_9.VALOR_ABERTO, Decimal("196819.21"))
 
 
 class RecargaObjectTestCase(TestCase):
