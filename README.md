@@ -18,6 +18,12 @@ houver necessidade.
 
 O objeto `Recarga` nada mais é que um helper para acessar a resposta padrão da `API` da `RV`.
 
+### Homologação
+Foi adicionado no arquivo de textos uma variavel chamada `RODAR_HOMOL` que por padrão tem o valor de `False`. Caso
+deseje gerar os dados para homologacao, basta alterar o valor para `True` e rodar os `unittests` com o commando `python -m unittest`.
+
+Será printado no console as informações necessárias para envio a `RV Tecnologia` para devida homologação e liberação. 
+
 ### Integrações e tarefas pendentes
 #### Transações
 - [X] 1  - Consulta de Produtos e Operadoras
