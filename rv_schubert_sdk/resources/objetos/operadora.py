@@ -20,7 +20,10 @@ class Operadora:
 
         if __produtos is not None:
             self.PRODUTOS = []
-            for produto in __produtos:
-                self.PRODUTOS.append(Produto().build_from_dict(produto))
+            if isinstance(__produtos, list):
+                for produto in __produtos:
+                    self.PRODUTOS.append(Produto().build_from_dict(produto))
+            else:
+                self.PRODUTOS.append(Produto().build_from_dict(__produtos))
 
         return self

@@ -18,12 +18,12 @@ class Produto:
     ESTADOS_PRODUTO_PIN = None
 
     def build_from_dict(self, dict):
-        self.CODIGO_PRODUTO = None if dict.get('codigoProduto', None) is None else dict.get('codigoProduto')
-        self.NOME_PRODUTO = None if dict.get('nomeProduto', None) is None else dict.get('nomeProduto')
+        self.CODIGO_PRODUTO = None if dict.get('codigoProduto', None) is None else dict.get('codigoProduto', None)
+        self.NOME_PRODUTO = None if dict.get('nomeProduto', None) is None else dict.get('nomeProduto', None)
         self.PRECO_COMPRA_PRODUTO = None if dict.get('precocompraProduto', None) is None else Decimal(dict.get('precocompraProduto'))
         self.PRECO_VENDA_PRODUTO = None if dict.get('precovendaProduto', None) is None else Decimal(dict.get('precovendaProduto'))
-        self.VALIDADE_PRODUTO = None if dict.get('validadeProduto', None) is None else dict.get('validadeProduto')
-        self.MODELO_RECARGA = None if dict.get('modeloRecarga', None) is None else dict.get('modeloRecarga')
+        self.VALIDADE_PRODUTO = None if dict.get('validadeProduto', None) is None else dict.get('validadeProduto', None)
+        self.MODELO_RECARGA = None if dict.get('modeloRecarga', None) is None else dict.get('modeloRecarga', None)
         self.VALOR_MINIMO_PRODUTO = None if dict.get('valorMinimoProduto', None) is None else Decimal(dict.get('valorMinimoProduto'))
         self.VALOR_MAXIMO_PRODUTO = None if dict.get('valorMaximoProduto', None) is None else Decimal(dict.get('valorMaximoProduto'))
         self.VALOR_INCREMENTO_PRODUTO = None if dict.get('valorIncrementoProduto', None) is None else Decimal(dict.get('valorIncrementoProduto'))
