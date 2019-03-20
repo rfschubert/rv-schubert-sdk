@@ -30,6 +30,29 @@ class Transacao9Mock:
         """
 
 
+class Transacao7Mock:
+
+    def get_confirmada(self):
+        return """
+        <?xml version="1.0" encoding="iso-8859-1" ?>
+        <cellcard>
+        <codigoTransacao>7</codigoTransacao>
+        <codigo>5</codigo>
+        <cod_online>1686085767</cod_online>
+        <cod_retorno>0</cod_retorno></cellcard>
+        """
+
+    def get_cancelada(self):
+        return """
+            <?xml version="1.0" encoding="iso-8859-1" ?>
+            <cellcard>
+            <codigoTransacao>7</codigoTransacao>
+            <codigo>6</codigo>
+            <cod_online>1686085738</cod_online>
+            <cod_retorno>1</cod_retorno></cellcard>
+        """
+
+
 class Transacao5Mock:
 
     def get_recarga_oi_20(self):
