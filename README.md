@@ -22,11 +22,11 @@ O objeto `Recarga` nada mais é que um helper para acessar a resposta padrão da
 #### Transações
 - [X] 1  - Consulta de Produtos e Operadoras
 - [X] 3  - Venda de PINs
-- [ ] 5  - Venda de RECARGA ONLINE
+- [X] 5  - Venda de RECARGA ONLINE
 - [ ] 6  - Consulta de Status
 - [ ] 7  - Confirmação / Desfazimento de Transações
 - [ ] 8  - Lista de Transações Pendentes
-- [ ] 9  - Consulta Limite de Crédito
+- [X] 9  - Consulta Limite de Crédito
 - [ ] 10 - Consulta Lista de Boletos
 - [ ] 11 - Consulta de Boleto
 - [ ] 12 - Emissão Boleto Antecipado
@@ -44,6 +44,8 @@ os erros abaixo, ou seja, todos os erros abaixo herdam de `ErroRV`.
 Caso haja um `raise` de erro, você poderá tratar da seguinte forma:
  
 ```python
+from rv_schubert_sdk import ErroRV
+
 try:
     # seu codigo
 except ErroRV as e:
@@ -53,6 +55,8 @@ except ErroRV as e:
 Ou caso queira algo mais específico:
 
 ```python
+from rv_schubert_sdk import FoneIncompletoInvalido
+
 try:
     # seu codigo
 except FoneIncompletoInvalido as e:
