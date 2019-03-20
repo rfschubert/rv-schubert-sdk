@@ -1,4 +1,4 @@
-from .objetos import Recarga
+from .objetos import Recarga, Produto, Operadora
 
 from .exceptions import *
 from .rv_api import RVapi

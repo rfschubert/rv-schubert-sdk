@@ -87,6 +87,151 @@ class Transacao3Mock:
 
 class Transacao1Mock:
 
+    def get_produto_dict(self):
+        return {
+                'codigoProduto': 'M65',
+                'nomeProduto': 'PREFACE9.9',
+                'precocompraProduto': '9.5535',
+                'precovendaProduto': '9.90',
+                'validadeProduto': '0',
+                'modeloRecarga': 'ONLINE',
+                'valorMinimoProduto': '9.90',
+                'valorMaximoProduto': '9.90',
+                'valorIncrementoProduto': '0.00',
+                'ultima_atualizacaoProduto': '2017-09-01 15:40:15',
+                'precoVariavelProduto': '0',
+                'estadosProdutoPin': {
+                    'qtdEstadosProduto': '24',
+                    'estadoProduto': [
+                        'AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS',
+                        'MT', 'PA', 'PB', 'PE', 'PI', 'RJ', 'RN', 'RO', 'RR', 'SE', 'SP', 'TO'
+                    ]
+                }
+            }
+
+    def get_operadora_dict(self):
+        return {
+                'codigoOperadora': 'M5',
+                'nomeOperadora': 'TIM',
+                'ultimaAtualizacaoOperadora': '2009-04-03 15:05:37',
+                'estadosAtuantes': {
+                    'qtdEstadosOperadora': '27',
+                    'estadoOperadora': [
+                        'AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE',
+                        'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO'
+                    ]
+                },
+                'produtos': {
+                    'qtdProdutos': '8',
+                    'produto': [{
+                        'codigoProduto': 'M65',
+                        'nomeProduto': 'PREFACE9.9',
+                        'precocompraProduto': '9.5535',
+                        'precovendaProduto': '9.90',
+                        'validadeProduto': '0',
+                        'modeloRecarga': 'ONLINE',
+                        'valorMinimoProduto': '9.90',
+                        'valorMaximoProduto': '9.90',
+                        'valorIncrementoProduto': '0.00',
+                        'ultima_atualizacaoProduto': '2017-09-01 15:40:15',
+                        'precoVariavelProduto': '0',
+                        'estadosProdutoPin': {
+                            'qtdEstadosProduto': '24',
+                            'estadoProduto': [
+                                'AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS',
+                                'MT', 'PA', 'PB', 'PE', 'PI', 'RJ', 'RN', 'RO', 'RR', 'SE', 'SP', 'TO'
+                            ]
+                        }
+                    },{
+                            'codigoProduto': 'M53',
+                            'nomeProduto': 'TIM R$10',
+                            'precocompraProduto': '9.65',
+                            'precovendaProduto': '10.00',
+                            'validadeProduto': '0',
+                            'modeloRecarga': 'ONLINE',
+                            'valorMinimoProduto': '10.00',
+                            'valorMaximoProduto': '10.00',
+                            'valorIncrementoProduto': '0.00',
+                            'ultima_atualizacaoProduto': '2017-08-07 09:19:26',
+                            'precoVariavelProduto': '0',
+                            'estadosProdutoPin': {
+                                'qtdEstadosProduto': '27',
+                                'estadoProduto': [
+                                    'AC',
+                                    'AL',
+                                    'AM',
+                                    'AP',
+                                    'BA',
+                                    'CE',
+                                    'DF',
+                                    'ES',
+                                    'GO',
+                                    'MA',
+                                    'MG',
+                                    'MS',
+                                    'MT',
+                                    'PA',
+                                    'PB',
+                                    'PE',
+                                    'PI',
+                                    'PR',
+                                    'RJ',
+                                    'RN',
+                                    'RO',
+                                    'RR',
+                                    'RS',
+                                    'SC',
+                                    'SE',
+                                    'SP',
+                                    'TO'
+                                ]
+                            }
+                    },{
+                            'codigoProduto': 'M55',
+                            'nomeProduto': 'TIM R$15',
+                            'precocompraProduto': '14.475',
+                            'precovendaProduto': '15.00',
+                            'validadeProduto': '0',
+                            'modeloRecarga': 'ONLINE',
+                            'valorMinimoProduto': '15.00',
+                            'valorMaximoProduto': '15.00',
+                            'valorIncrementoProduto': '0.00',
+                            'ultima_atualizacaoProduto': '2017-05-23 13:56:01',
+                            'precoVariavelProduto': '0',
+                            'estadosProdutoPin': {
+                                'qtdEstadosProduto': '27',
+                                'estadoProduto': [
+                                    'AC',
+                                    'AL',
+                                    'AM',
+                                    'AP',
+                                    'BA',
+                                    'CE',
+                                    'DF',
+                                    'ES',
+                                    'GO',
+                                    'MA',
+                                    'MG',
+                                    'MS',
+                                    'MT',
+                                    'PA',
+                                    'PB',
+                                    'PE',
+                                    'PI',
+                                    'PR',
+                                    'RJ',
+                                    'RN',
+                                    'RO',
+                                    'RR',
+                                    'RS',
+                                    'SC',
+                                    'SE',
+                                    'SP',
+                                    'TO']}}
+                    ]
+                }
+            }
+
     def get(self):
         return """
         <?xml version="1.0" encoding="ISO-8859-1" ?>
