@@ -1,3 +1,4 @@
+import random
 from decimal import Decimal
 
 import pendulum
@@ -19,6 +20,8 @@ from rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, E
     CobrancaAindaNaoVisualizada, TransacaoNaoPermitida
 
 from unittest import TestCase
+
+RODAR_HOMOL = False
 
 
 class RVapiTestCase(TestCase):
@@ -233,16 +236,23 @@ class ProdutoObjectTestCase(TestCase):
 
         self.assertEqual(produto.CODIGO_PRODUTO, Transacao1Mock().get_produto_dict()['codigoProduto'])
         self.assertEqual(produto.NOME_PRODUTO, Transacao1Mock().get_produto_dict()['nomeProduto'])
-        self.assertEqual(produto.PRECO_COMPRA_PRODUTO, Decimal(Transacao1Mock().get_produto_dict()['precocompraProduto']))
+        self.assertEqual(produto.PRECO_COMPRA_PRODUTO,
+                         Decimal(Transacao1Mock().get_produto_dict()['precocompraProduto']))
         self.assertEqual(produto.PRECO_VENDA_PRODUTO, Decimal(Transacao1Mock().get_produto_dict()['precovendaProduto']))
         self.assertEqual(produto.VALIDADE_PRODUTO, Transacao1Mock().get_produto_dict()['validadeProduto'])
         self.assertEqual(produto.MODELO_RECARGA, Transacao1Mock().get_produto_dict()['modeloRecarga'])
-        self.assertEqual(produto.VALOR_MINIMO_PRODUTO, Decimal(Transacao1Mock().get_produto_dict()['valorMinimoProduto']))
-        self.assertEqual(produto.VALOR_MAXIMO_PRODUTO, Decimal(Transacao1Mock().get_produto_dict()['valorMaximoProduto']))
-        self.assertEqual(produto.VALOR_INCREMENTO_PRODUTO, Decimal(Transacao1Mock().get_produto_dict()['valorIncrementoProduto']))
-        self.assertEqual(produto.ULTIMA_ATUALIZACAO_PRODUTO, pendulum.parse(Transacao1Mock().get_produto_dict()['ultima_atualizacaoProduto']))
-        self.assertEqual(produto.PRECO_VARIAVEL_PRODUTO, Decimal(Transacao1Mock().get_produto_dict()['precoVariavelProduto']))
-        self.assertEqual(produto.ESTADOS_PRODUTO_PIN, Transacao1Mock().get_produto_dict()['estadosProdutoPin']['estadoProduto'])
+        self.assertEqual(produto.VALOR_MINIMO_PRODUTO,
+                         Decimal(Transacao1Mock().get_produto_dict()['valorMinimoProduto']))
+        self.assertEqual(produto.VALOR_MAXIMO_PRODUTO,
+                         Decimal(Transacao1Mock().get_produto_dict()['valorMaximoProduto']))
+        self.assertEqual(produto.VALOR_INCREMENTO_PRODUTO,
+                         Decimal(Transacao1Mock().get_produto_dict()['valorIncrementoProduto']))
+        self.assertEqual(produto.ULTIMA_ATUALIZACAO_PRODUTO,
+                         pendulum.parse(Transacao1Mock().get_produto_dict()['ultima_atualizacaoProduto']))
+        self.assertEqual(produto.PRECO_VARIAVEL_PRODUTO,
+                         Decimal(Transacao1Mock().get_produto_dict()['precoVariavelProduto']))
+        self.assertEqual(produto.ESTADOS_PRODUTO_PIN,
+                         Transacao1Mock().get_produto_dict()['estadosProdutoPin']['estadoProduto'])
 
 
 class OperadoraObjectTestCase(TestCase):
@@ -252,8 +262,10 @@ class OperadoraObjectTestCase(TestCase):
 
         self.assertEqual(operadora.CODIGO_OPERADORA, Transacao1Mock().get_operadora_dict()['codigoOperadora'])
         self.assertEqual(operadora.NOME_OPERADORA, Transacao1Mock().get_operadora_dict()['nomeOperadora'])
-        self.assertEqual(operadora.ULTIMA_ATUALIZACAO_OPERADORA, pendulum.parse(Transacao1Mock().get_operadora_dict()['ultimaAtualizacaoOperadora']))
-        self.assertEqual(operadora.ESTADOS_ATUANTES, Transacao1Mock().get_operadora_dict()['estadosAtuantes']['estadoOperadora'])
+        self.assertEqual(operadora.ULTIMA_ATUALIZACAO_OPERADORA,
+                         pendulum.parse(Transacao1Mock().get_operadora_dict()['ultimaAtualizacaoOperadora']))
+        self.assertEqual(operadora.ESTADOS_ATUANTES,
+                         Transacao1Mock().get_operadora_dict()['estadosAtuantes']['estadoOperadora'])
         self.assertEqual(len(operadora.PRODUTOS), 3)
         self.assertIsInstance(operadora.PRODUTOS[0], Produto)
 
@@ -335,54 +347,104 @@ class ErrosTestCase(TestCase):
             RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(24, "Transação não permitida"))
 
 
-# class HomologacaoUnitTest(TestCase):
-#     """
-#     Unit tests relacionados a homologacao juntamente a RV TEcnologia
-#
-#     Os resultados dos testes abaixo sao printados no console para poder ser enviados para a RV
-#     """
-#
-#     def test_1_consulta_valores(self):
-#         print("##################################################")
-#         print("CONSULTA DE VALORES")
-#         print("##################################################")
-#
-#         pass
-#
-#         print("##################################################")
-#
-#     def test_5_transacoes_pin_confirmada(self):
-#         print("##################################################")
-#         print("5 TRANSACOES PIN - CONFIRMADAS")
-#         print("##################################################")
-#
-#         pass
-#
-#         print("##################################################")
-#
-#     def test_5_transacoes_online_confirmada(self):
-#         print("##################################################")
-#         print("5 TRANSACOES ONLINE - CONFIRMADA")
-#         print("##################################################")
-#
-#         pass
-#
-#         print("##################################################")
-#
-#     def test_5_transacoes_online_cancelada(self):
-#         print("##################################################")
-#         print("5 TRANSACOES ONLINE - CANCELADA")
-#         print("##################################################")
-#
-#         pass
-#
-#         print("##################################################")
-#
-#     def test_1_transacao_online_confirmada_valor_variavel_prod_1180(self):
-#         print("##################################################")
-#         print("1 TRANSACAO ONLINE - CONFIRMADA - VALOR VARIAVEL PROD 1180")
-#         print("##################################################")
-#
-#         pass
-#
-#         print("##################################################")
+if RODAR_HOMOL is True:
+    class HomologacaoUnitTest(TestCase):
+        """
+        Unit tests relacionados a homologacao juntamente a RV TEcnologia
+
+        Os resultados dos testes abaixo sao printados no console para poder ser enviados para a RV
+        """
+
+        def test_1_consulta_valores(self):
+            print("##################################################")
+            print("CONSULTA DE VALORES")
+            print("##################################################")
+
+            print(Transacao9().execute())
+            print("##################################################")
+
+        def test_5_transacoes_pin_confirmada(self):
+            print("##################################################")
+            print("5 TRANSACOES PIN - CONFIRMADAS")
+            print("##################################################")
+            id_interno = random.randint(9999, 99999)
+
+            print(Transacao3(homologacao=True).execute(compra=id_interno + 1, produto="2078").RAW_DATA)  # steam $50
+            print(Transacao3(homologacao=True).execute(compra=id_interno + 2, produto="1949").RAW_DATA)  # google $15
+            print(Transacao3(homologacao=True).execute(compra=id_interno + 3, produto="2078").RAW_DATA)  # steam $50
+            print(Transacao3(homologacao=True).execute(compra=id_interno + 4, produto="775").RAW_DATA)  # paymentz $45
+            print(Transacao3(homologacao=True).execute(compra=id_interno + 5, produto="1952").RAW_DATA)  # google $100
+
+            print(Transacao7().execute(compra=id_interno + 1))
+            print(Transacao7().execute(compra=id_interno + 2))
+            print(Transacao7().execute(compra=id_interno + 3))
+            print(Transacao7().execute(compra=id_interno + 4))
+            print(Transacao7().execute(compra=id_interno + 5))
+            print("##################################################")
+
+        def test_5_transacoes_online_confirmada(self):
+            print("##################################################")
+            print("5 TRANSACOES ONLINE - CONFIRMADA")
+            print("##################################################")
+            id_interno = random.randint(9999, 99999)
+
+            transacao_5 = Transacao5()
+
+            print(transacao_5.execute(compra=id_interno + 1, produto='470', ddd='47',
+                                      fone='99999999').RAW_DATA)  # nextel $30
+            print(transacao_5.execute(compra=id_interno + 2, produto='205', ddd='47',
+                                      fone='99999999').RAW_DATA)  # vivo fixo $30
+            print(transacao_5.execute(compra=id_interno + 3, produto='1629', ddd='47',
+                                      fone='99999999').RAW_DATA)  # oi $100
+            print(transacao_5.execute(compra=id_interno + 4, produto='1628', ddd='47',
+                                      fone='99999999').RAW_DATA)  # oi $35
+            print(transacao_5.execute(compra=id_interno + 5, produto='M5', ddd='47',
+                                      fone='99999999').RAW_DATA)  # claro $30
+
+            print(Transacao7().execute(compra=id_interno + 1))
+            print(Transacao7().execute(compra=id_interno + 2))
+            print(Transacao7().execute(compra=id_interno + 3))
+            print(Transacao7().execute(compra=id_interno + 4))
+            print(Transacao7().execute(compra=id_interno + 5))
+            print("##################################################")
+
+        def test_5_transacoes_online_cancelada(self):
+            print("##################################################")
+            print("5 TRANSACOES ONLINE - CANCELADA")
+            print("##################################################")
+            id_interno = random.randint(9999, 99999)
+
+            print(Transacao5().execute(compra=id_interno + 1, produto='470', ddd='47',
+                                       fone='99999999').RAW_DATA)  # nextel $30
+            print(Transacao5().execute(compra=id_interno + 2, produto='205', ddd='47',
+                                       fone='99999999').RAW_DATA)  # vivo fixo $30
+            print(Transacao5().execute(compra=id_interno + 3, produto='1629', ddd='47',
+                                       fone='99999999').RAW_DATA)  # oi $100
+            print(Transacao5().execute(compra=id_interno + 4, produto='1628', ddd='47',
+                                       fone='99999999').RAW_DATA)  # oi $35
+            print(Transacao5().execute(compra=id_interno + 5, produto='M5', ddd='47',
+                                       fone='99999999').RAW_DATA)  # claro $30
+
+            print(Transacao7().execute(compra=id_interno + 1, cod_retorno=1))
+            print(Transacao7().execute(compra=id_interno + 2, cod_retorno=1))
+            print(Transacao7().execute(compra=id_interno + 3, cod_retorno=1))
+            print(Transacao7().execute(compra=id_interno + 4, cod_retorno=1))
+            print(Transacao7().execute(compra=id_interno + 5, cod_retorno=1))
+            print("##################################################")
+
+        def test_1_transacao_online_confirmada_valor_variavel_prod_1180(self):
+            print("##################################################")
+            print("1 TRANSACAO ONLINE - CONFIRMADA - VALOR VARIAVEL PROD 1180")
+            print("##################################################")
+            id_interno = random.randint(9999, 99999)
+
+            print(Transacao5().execute(
+                compra=id_interno,
+                produto='1180', valor="40.0",
+                codigo_assinante="1234",
+                ddd='47',
+                fone='99999999'
+            ).RAW_DATA)
+
+            print(Transacao7().execute(compra=id_interno, cod_retorno=1))
+            print("##################################################")

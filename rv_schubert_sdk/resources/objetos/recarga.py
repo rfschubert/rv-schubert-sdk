@@ -24,9 +24,11 @@ class Recarga:
     CODIGO_ASSINANTE = None
     NSU = None
     POSSUI_BOLETO = None
+    RAW_DATA = None
 
     def parse_dict(self, data):
         data = data['cellcard']
+        self.RAW_DATA = data
         self.VERSAO = None if data.get('versao', None) is None else float(data.get('versao'))
         self.COD_TRANSACAO = None if data.get('codigoTransacao', None) is None else int(data.get('codigoTransacao'))
         self.REENVIO = None if data.get('reenvio', None) is None else int(data.get('reenvio'))

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25013fef-32aa-4994-b4c5-8025e2ccac57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rv_schubert_sdk/resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv_schubert_sdk/resources/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_mockups.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_mockups.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv_schubert_sdk/resources/objetos/recarga.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv_schubert_sdk/resources/objetos/recarga.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tests.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,113 +15,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_9.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="196">
-                  <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-                  <folding>
-                    <element signature="e#49#76#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/tests.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="180" column="95" selection-start-line="180" selection-start-column="95" selection-end-line="180" selection-end-column="95" />
-                  <folding>
-                    <element signature="e#0#27#0" expanded="true" />
-                    <element signature="e#931#3572#0" />
-                    <element signature="e#956#993#0" />
-                    <element signature="e#1040#1132#0" />
-                    <element signature="e#1182#1279#0" />
-                    <element signature="e#1320#1362#0" />
-                    <element signature="e#1420#1588#0" />
-                    <element signature="e#1462#1587#0" />
-                    <element signature="e#1638#2910#0" />
-                    <element signature="e#1644#2836#0" />
-                    <element signature="e#2955#3245#0" />
-                    <element signature="e#3291#3572#0" />
-                    <element signature="e#3451#3571#0" />
-                    <element signature="e#3616#3982#0" />
-                    <element signature="e#3641#3672#0" />
-                    <element signature="e#3733#3779#0" />
-                    <element signature="e#3828#3982#0" />
-                    <element signature="e#4026#4638#0" />
-                    <element signature="e#4051#4082#0" />
-                    <element signature="e#4143#4189#0" />
-                    <element signature="e#4246#4449#0" />
-                    <element signature="e#4505#4638#0" />
-                    <element signature="e#4682#6202#0" />
-                    <element signature="e#4707#4738#0" />
-                    <element signature="e#4799#4845#0" />
-                    <element signature="e#4911#6202#0" />
-                    <element signature="e#6246#6697#0" />
-                    <element signature="e#6271#6302#0" />
-                    <element signature="e#6340#6697#0" />
-                    <element signature="e#6744#8231#0" />
-                    <element signature="e#6779#8231#0" />
-                    <element signature="e#8278#9831#0" />
-                    <element signature="e#8326#9831#0" />
-                    <element signature="e#9880#10622#0" />
-                    <element signature="e#9930#10622#0" />
-                    <element signature="e#10661#15764#0" />
-                    <element signature="e#10686#10718#0" />
-                    <element signature="e#10755#15764#0" />
-                    <element signature="e#10799#10967#0" />
-                    <element signature="e#11020#11196#0" />
-                    <element signature="e#11249#11408#0" />
-                    <element signature="e#11461#11626#0" />
-                    <element signature="e#11679#11827#0" />
-                    <element signature="e#11880#12065#0" />
-                    <element signature="e#12118#12280#0" />
-                    <element signature="e#12333#12517#0" />
-                    <element signature="e#12570#12721#0" />
-                    <element signature="e#12774#12923#0" />
-                    <element signature="e#12976#13111#0" />
-                    <element signature="e#13164#13314#0" />
-                    <element signature="e#13367#13523#0" />
-                    <element signature="e#13576#13750#0" />
-                    <element signature="e#13803#13972#0" />
-                    <element signature="e#14025#14185#0" />
-                    <element signature="e#14238#14400#0" />
-                    <element signature="e#14453#14635#0" />
-                    <element signature="e#14688#14870#0" />
-                    <element signature="e#14923#15084#0" />
-                    <element signature="e#15137#15310#0" />
-                    <element signature="e#15363#15543#0" />
-                    <element signature="e#15596#15764#0" />
-                    <element signature="e#15767#15805#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_7.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="38" selection-start-line="38" selection-end-line="38" />
-                  <folding>
-                    <element signature="e#49#76#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="147">
+                <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -132,16 +39,16 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>1180</find>
       <find>ErroRv</find>
       <find>license</find>
       <find>homologacao=True</find>
-      <find>&lt;modeloRecarga&gt;PIN&lt;/modeloRecarga&gt;</find>
-      <find>&lt;modeloRecarga&gt;ONLINE&lt;/modeloRecarga&gt;</find>
       <find>coridog</find>
       <find>M65</find>
       <find>GOOGLE PLAY DIGITAL</find>
       <find>Transacao</find>
+      <find>&lt;modeloRecarga&gt;PIN&lt;/modeloRecarga&gt;</find>
+      <find>&lt;modeloRecarga&gt;ONLINE&lt;/modeloRecarga&gt;</find>
+      <find>1180</find>
     </findStrings>
     <replaceStrings>
       <replace>ErroRV</replace>
@@ -191,18 +98,19 @@
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_5.py" />
-        <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/objetos/recarga.py" />
         <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/objetos/__init__.py" />
         <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_1.py" />
         <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/objetos/produto.py" />
         <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/objetos/operadora.py" />
         <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_9.py" />
-        <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/rv_api.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/__init__.py" />
         <option value="$PROJECT_DIR$/tests/test_mockups.py" />
-        <option value="$PROJECT_DIR$/tests/tests.py" />
         <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_7.py" />
+        <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/objetos/recarga.py" />
+        <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/rv_api.py" />
+        <option value="$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_3.py" />
+        <option value="$PROJECT_DIR$/tests/tests.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -322,21 +230,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 01m 57s.xml">
-      <configuration name="Unittests in tests.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 02m 56s.xml">
-      <configuration name="Unittests in tests.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 03m 04s.xml">
-      <configuration name="Unittests in tests.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 03m 57s.xml">
-      <configuration name="Unittests in tests.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 04m 10s.xml">
-      <configuration name="Unittests in tests.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 04m 19s.xml">
       <configuration name="Unittests in tests.py" configurationId="tests" />
     </history-entry>
@@ -352,23 +245,38 @@
     <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 05m 22s.xml">
       <configuration name="Unittests in tests.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 05m 25s.xml">
+      <configuration name="Unittests in tests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 21m 07s.xml">
+      <configuration name="Unittests in tests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 42m 55s.xml">
+      <configuration name="Unittests in tests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 44m 52s.xml">
+      <configuration name="Unittests in tests.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_tests_py - 2019.03.20 at 12h 44m 55s.xml">
+      <configuration name="Unittests in tests.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1716693" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1716693" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3722334" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3722334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27867204" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.38732395" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32897383" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -386,16 +294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#36#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -482,16 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
-          <folding>
-            <element signature="e#46#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -522,23 +410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/objetos/recarga.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="230">
-            <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -553,16 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_9.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#49#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -572,18 +433,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/rv_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="243">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_mockups.py">
+    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#46#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="e#36#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#49#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_mockups.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="1939" column="53" lean-forward="true" selection-start-line="1939" selection-start-column="53" selection-end-line="1939" selection-end-column="53" />
           <folding>
             <element signature="e#22#442#0" />
             <element signature="e#75#442#0" />
@@ -593,12 +484,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tests.py">
+    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/objetos/recarga.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="180" column="95" selection-start-line="180" selection-start-column="95" selection-end-line="180" selection-end-column="95" />
+        <state relative-caret-position="388">
+          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
             <element signature="e#931#3572#0" />
             <element signature="e#956#993#0" />
             <element signature="e#1040#1132#0" />
@@ -612,11 +512,9 @@
             <element signature="e#3291#3572#0" />
             <element signature="e#3451#3571#0" />
             <element signature="e#3616#3982#0" />
-            <element signature="e#3641#3672#0" />
             <element signature="e#3733#3779#0" />
             <element signature="e#3828#3982#0" />
             <element signature="e#4026#4638#0" />
-            <element signature="e#4051#4082#0" />
             <element signature="e#4143#4189#0" />
             <element signature="e#4246#4449#0" />
             <element signature="e#4505#4638#0" />
@@ -624,6 +522,8 @@
             <element signature="e#4707#4738#0" />
             <element signature="e#4799#4845#0" />
             <element signature="e#4911#6202#0" />
+            <element signature="e#6270#6637#0" />
+            <element signature="e#6364#6637#0" />
             <element signature="e#6246#6697#0" />
             <element signature="e#6271#6302#0" />
             <element signature="e#6340#6697#0" />
@@ -659,18 +559,27 @@
             <element signature="e#15137#15310#0" />
             <element signature="e#15363#15543#0" />
             <element signature="e#15596#15764#0" />
-            <element signature="e#15767#15805#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_7.py">
+    <entry file="file://$PROJECT_DIR$/rv_schubert_sdk/resources/transacao_9.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="289">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#49#76#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="147">
+            <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

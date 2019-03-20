@@ -24,7 +24,7 @@ O objeto `Recarga` nada mais é que um helper para acessar a resposta padrão da
 - [X] 3  - Venda de PINs
 - [X] 5  - Venda de RECARGA ONLINE
 - [ ] 6  - Consulta de Status
-- [ ] 7  - Confirmação / Desfazimento de Transações
+- [X] 7  - Confirmação / Desfazimento de Transações
 - [ ] 8  - Lista de Transações Pendentes
 - [X] 9  - Consulta Limite de Crédito
 - [ ] 10 - Consulta Lista de Boletos

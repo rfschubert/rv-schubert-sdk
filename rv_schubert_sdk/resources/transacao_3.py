@@ -10,6 +10,12 @@ from .objetos.recarga import Recarga
 class Transacao3(RVapi):
 
     def execute(self, compra: int, produto: str, mock=None) -> Recarga:
+        """
+        :param compra: codigo da compra no sistema do cliente
+        :param produto: codigo do produto na RV
+        :param mock: bypass no server para tests
+        :return: object Recarga
+        """
         if mock is not None:
             response = mock
         else:
@@ -25,9 +31,6 @@ class Transacao3(RVapi):
                 # "fone": fone,
                 # "codigoAssinante": codigo_assinante,
             }
-
-            # if valor is not None:
-            #     payload['valor'] = valor
 
             response = self.doPOST(payload)
 
