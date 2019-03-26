@@ -9,7 +9,7 @@ from rv_schubert_sdk import RVapi, \
     Transacao5, \
     Transacao7, \
     Transacao9, \
-    Recarga, ErroRV, Produto, Operadora
+    Recarga, ErroRV, Produto, Operadora, Comprovante
 from .test_mockups import Transacao1Mock, Transacao3Mock, ErrosMock, Transacao5Mock, Transacao9Mock, Transacao7Mock
 
 from rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, EstoqueInsuficiente, \
@@ -21,7 +21,7 @@ from rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, E
 
 from unittest import TestCase
 
-RODAR_HOMOL = True
+RODAR_HOMOL = False
 
 
 if RODAR_HOMOL is False:
@@ -353,6 +353,35 @@ if RODAR_HOMOL is False:
                 self.assertTrue(issubclass(TransacaoNaoPermitida, ErroRV))
                 RVapi().convert_xml_to_dict(self.error_builder.build_error_xml(24, "Transação não permitida"))
 
+    class ComprovanteTestCase(TestCase):
+
+        def setUp(self):
+            self.comprovante = Comprovante()
+
+        def test_generate_online(self):
+            self.comprovante.generate_for_online(
+                data_hora=pendulum.now(),
+                loja="LOJA TESTE",
+                cod_online="00001",
+                operadora="TIM",
+                valor=Decimal("10"),
+                telefone="47 99999-9999",
+                mensagem="Mensagem de teste",
+                nsu="123"
+            )
+
+        def test_generate_pin(self):
+            self.comprovante.generate_for_pin(
+                data_hora=pendulum.now(),
+                loja="LOJA TESTE",
+                cod_online="00001",
+                operadora="TIM",
+                valor=Decimal("10"),
+                pin="909090",
+                lote_serie="1357623",
+                mensagem="Mensagem de teste"
+            )
+
 
 if RODAR_HOMOL is True:
     class HomologacaoUnitTest(TestCase):
@@ -397,16 +426,29 @@ if RODAR_HOMOL is True:
                 compra=id_interno + 4,
                 produto="775"
             ).RAW_DATA['cod_online'])  # paymentz $45
-            print("id_interno: ", id_interno + 5,  "| cod_online: ", Transacao3(homologacao=True).execute(
+
+            transacao = Transacao3(homologacao=True).execute(
                 compra=id_interno + 5,
                 produto="1952"
-            ).RAW_DATA['cod_online'])  # google $100
+            )
+            print("id_interno: ", id_interno + 5,  "| cod_online: ", transacao.RAW_DATA['cod_online'])  # google $100
 
             print(Transacao7().execute(compra=id_interno + 1))
             print(Transacao7().execute(compra=id_interno + 2))
             print(Transacao7().execute(compra=id_interno + 3))
             print(Transacao7().execute(compra=id_interno + 4))
             print(Transacao7().execute(compra=id_interno + 5))
+
+            Comprovante().generate_for_pin(
+                data_hora=transacao.DATA_RV,
+                loja="LOJA TESTE",
+                cod_online=transacao.COD_ONLINE,
+                operadora="PAYMENTEZ",
+                valor=transacao.FACE,
+                pin=transacao.PIN,
+                lote_serie=transacao.LOTE,
+                mensagem=transacao.MENSAGEM
+            )
             print("##################################################")
 
         def test_5_transacoes_online_confirmadas(self):
@@ -505,13 +547,27 @@ if RODAR_HOMOL is True:
             print("##################################################")
             id_interno = random.randint(40010, 50000)
 
-            print("id_interno: ", id_interno,  "| cod_online: ", Transacao5().execute(
+            transacao = Transacao5().execute(
                 compra=id_interno,
                 produto='1180', valor="40.0",
                 codigo_assinante="1234",
                 ddd='47',
                 fone='99999999'
-            ).RAW_DATA['cod_online'])
+            )
 
-            print(Transacao7().execute(compra=id_interno))
+            print("id_interno: ", id_interno,  "| cod_online: ", transacao.RAW_DATA['cod_online'])
+
+            result = Transacao7().execute(compra=id_interno)
+            print(result, transacao)
+
+            Comprovante().generate_for_online(
+                data_hora=transacao.DATA_RV,
+                loja="LOJA TESTE",
+                cod_online=transacao.COD_ONLINE,
+                operadora="ZUUM",
+                valor=transacao.FACE,
+                telefone=transacao.FONE,
+                mensagem=transacao.MENSAGEM,
+                nsu=transacao.NSU
+            )
             print("##################################################")
