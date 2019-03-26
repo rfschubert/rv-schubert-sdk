@@ -1,6 +1,8 @@
 # rv-schubert-sdk
 SDK de integração com a RV Tecnologia por meio de sua `API XML`
 
+Biblioteca homologada na `RV Tecnologia` no dia `26 de março de 2019` e pronta para uso em produção.
+
 ### Dependências
 Atualmente o SDK é dependente dos seguintes pacotes:
 
