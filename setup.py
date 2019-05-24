@@ -1,8 +1,5 @@
 from setuptools import setup, find_packages
 
-with open('README.md') as f:
-    readme = f.read()
-
 setup(
     name="rv-schubert-sdk",
     author="Raphael Schubert",
@@ -11,7 +8,6 @@ setup(
     url="https://github.com/rfschubert/rv-schubert-sdk",
     version='1.1.0',
     packages=find_packages(exclude=('tests', 'docs')),
-    long_description=readme,
     install_requires=[
         'xmltodict',
         'requests',
