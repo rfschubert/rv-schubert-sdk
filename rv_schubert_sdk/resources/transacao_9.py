@@ -13,9 +13,6 @@ class Transacao9(RVapi):
     ANTECIPADO = None
     VALOR_ABERTO = None
 
-    def __init__(self, *args, **kwargs):
-        super(Transacao9, self).__init__(self, *args, **kwargs)
-
     def execute(self, mock = None):
         if mock is None:
             payload = {

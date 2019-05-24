@@ -9,9 +9,6 @@ from .objetos.recarga import Recarga
 
 class Transacao5(RVapi):
 
-    def __init__(self, *args, **kwargs):
-        super(Transacao5, self).__init__(self, *args, **kwargs)
-
     def execute(
             self,
             compra: int,

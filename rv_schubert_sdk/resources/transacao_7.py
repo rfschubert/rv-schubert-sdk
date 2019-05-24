@@ -11,9 +11,6 @@ class Transacao7(RVapi):
     CONFIRMADO = False
     CANCELADO = False
 
-    def __init__(self, *args, **kwargs):
-        super(Transacao7, self).__init__(self, *args, **kwargs)
-
     def execute(self, compra: int, cod_retorno: int = 0, mock=None) -> dict:
         """
         :param compra: Codigo da compra no sistema do cliente

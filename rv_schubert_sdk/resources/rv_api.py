@@ -7,7 +7,7 @@ import xmltodict
 
 
 class RVapi:
-    URL_PRODUCAO = "https://xml.cellcard.com.br/integracao_xml.php"
+    URL_PRODUCAO = "https://xml.cellcard.com.br:4443/integracao_xml.php"
     URL_HOMOLOGACAO = "https://teste.cellcard.com.br/integracao_xml.php"
     SERVER_URL = None
     IN_PRODUCTION = None
@@ -81,5 +81,8 @@ class RVapi:
         }
 
         data = data.get('cellcard')
+        print("###############################")
+        print(data)
+        print("###############################")
         if data.get('erro', None) is not None:
             raise errors[data['erro']['codigo']]

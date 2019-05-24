@@ -6,9 +6,6 @@ class Transacao1(RVapi):
 
     OPERADORAS = None
 
-    def __init__(self, *args, **kwargs):
-        super(Transacao1, self).__init__(self, *args, **kwargs)
-
     def execute(self, mock=None):
         if mock is not None:
             response = mock

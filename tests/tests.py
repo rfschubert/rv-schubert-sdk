@@ -21,7 +21,7 @@ from rv_schubert_sdk import FoneIncompletoInvalido, LimiteCreditoInsuficiente, E
 
 from unittest import TestCase
 
-RODAR_HOMOL = False
+RODAR_HOMOL = True
 
 
 if RODAR_HOMOL is False:
@@ -108,6 +108,9 @@ if RODAR_HOMOL is False:
 
         def test_trasacao_1_execute(self):
             self.assertIsInstance(self.transacao_1.execute(mock=Transacao1Mock().get()), dict)
+
+            res = self.transacao_1.execute(mock=Transacao1Mock().get())
+            print(res)
             # self.assertIsInstance(self.transacao_1.OPERADORAS, Operadora)
 
 
