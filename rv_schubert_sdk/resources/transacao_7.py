@@ -1,5 +1,5 @@
 """
-Transação 7 - Consulta Limite de Credito
+Transação 7 - Confirmação / Desfazimento de Transações
 """
 from decimal import Decimal
 
